@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <!--view-->
+    <div id="app">
+        <p>{{msg}}</p>
+        <input type="text" v-model="msg">
+        <input type="button" v-bind:value="value" v-on:click="show">
+    </div>
+
+</body>
+<script type="text/javascript">
+    //Model
+    var exampleData = {
+        msg:'HelloWorld!!',
+        value:'按钮'
+    }
+    //viewModel
+    var vm = new Vue({
+        el : '#app',
+        data : exampleData,
+        methods : {
+            show : function(){
+                alert("Hello");
+            }
+        }
+    })
+</script>
+</html>
